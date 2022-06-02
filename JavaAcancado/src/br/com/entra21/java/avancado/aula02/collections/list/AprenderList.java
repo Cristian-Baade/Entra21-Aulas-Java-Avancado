@@ -37,12 +37,12 @@ public class AprenderList {
 			}
 
 		} while (opcao != 0);
-		System.out.println("Obrigado, volse sempre que quiser aprender mais sobre ENUM");
+		System.out.println("Obrigado, volte sempre que quiser aprender mais sobre ENUM");
 
 	}
 
 	private static void aprenderArrayList() {
-		
+
 		System.out.println("---------------Criando ARRAYS ------------------");
 		ArrayList<String> cidades = new ArrayList<>(Arrays.asList("João Pessoa", "Blumenau", "Florianopolis"));
 		System.out.println("Quantas cidades ? " + cidades.size());
@@ -56,30 +56,25 @@ public class AprenderList {
 		};
 		System.out.println("Quantas cores ? " + cores.size());
 
-		
-
 		System.out.println("---------------Inserindo itens no ARRAY ------------------");
-		
+
 		ArrayList<String> cargos = new ArrayList<>();
-		cargos.add("Programador jr"); 
+		cargos.add("Programador jr");
 		cargos.add("Programador pl");
 		cargos.add("Programador sr");
 		System.out.println("Quantos cargos ? " + cargos.size());
 
-		cores.add(0, "Branco");//inserindo na primeira posição
-
+		cores.add(0, "Branco");// inserindo na primeira posição
 
 		System.out.println("---------------Acessando itens no ARRAY ------------------");
 		System.out.println("Qual foi o meu primeiro cargo? " + cargos.get(0));
 		System.out.println("Qual foi o meu ultimo cargo? " + cargos.get(cargos.size() - 1));
 
-
 		System.out.println("---------------Percorrendo itens no ARRAY com iteração em array------------------");
 		System.out.println("Historicos de cargo");
 		for (String cargo : cargos) {
 			System.out.println("Cargo = " + cargo);
-		} 
-
+		}
 
 		System.out.println("---------------Percorrendo itens no ARRAY com index em array------------------");
 		System.out.println("De forma inversa");
@@ -87,77 +82,96 @@ public class AprenderList {
 
 			System.out.println("(" + cargo + ") cargo = " + cargos.get(cargo));
 
-		} 
-		
+		}
 
 		System.out.println("---------------Removendo itens no ARRAY ------------------");
-		System.out.println("Removendo quem estava no indice 0 ou seja "+cargos.get(0));
-		cargos.remove(0);//removi o item no indice 0
-		
+		System.out.println("Removendo quem estava no indice 0 ou seja " + cargos.get(0));
+		cargos.remove(0);// removi o item no indice 0
 
-		System.out.println("Removendo quem tem o cargo \"Programador sr\" pelo valor, sem saber que esta no indice "+cargos.indexOf("Programador sr"));
-		cargos.remove("Programador sr");//remove o elemento que tiver esse valor, o indice será procurado
+		System.out.println("Removendo quem tem o cargo \"Programador sr\" pelo valor, sem saber que esta no indice "
+				+ cargos.indexOf("Programador sr"));
+		cargos.remove("Programador sr");// remove o elemento que tiver esse valor, o indice será procurado
 
 		System.out.println("---------------Percorrendo itens no ARRAY com forEach------------------");
-		cargos.forEach(cargo -> { 
-		    System.out.println("Cargo " + cargo);
-		});
-		
-		 
+		cargos.forEach(cargo -> {
+			System.out.println("Cargo " + cargo);
 
-		 
+		});
+		// Criar uma lista de interesses
+		// Inclua 5 interesses
+		// Liste todos os interesses
+		// Dessa lista escolha 2 que são favoritos para mostrar
+		// Exclua um item por posição e outro por valor.
+		// um syso para cada ação dessa
+
+		ArrayList<String> interesses = new ArrayList<>();
+		interesses.add(" Desenhar");
+		interesses.add("Musica");
+		interesses.add(0, "Programar");
+		interesses.add("Escrever");
+		interesses.add("Jogar");
+
+		System.out.println("Tenho "+interesses.size()+" interesses e eles são");
+		for (String interesse : interesses) {
+			System.out.println("\t" +interesse);
+		}
+		
+		System.out.println("O meu primeiro favorito é " + interesses.get(0));
+		System.out.println("O meu segundo favorito é " + interesses.get(1));
+		System.out.println("Acho que posso abrir mão de " + interesses.get(3));
+		interesses.remove(3); // Aqui removo o item 3
+		System.out.println("E tambem posso abrir mçao de "+interesses.get(3));
+		interesses.remove(interesses.indexOf("Jogar")); // E aqui estou removendo a posição
+		
+		for (String interesse : interesses) {
+			System.out.println("\t" +interesse);
+		}
+		
 	}
 
 	private static void aprenderLinkedList() {
-LinkedList<String> nomes = new LinkedList<>();
+		LinkedList<String> nomes = new LinkedList<>();
 
+		System.out.println("---------------Inserindo itens no LINKED ------------------");
+		nomes.add("Rubem");
+		nomes.add("Fulano");
+		nomes.addFirst("Teste");
+		nomes.addLast("Ultimo");
+		nomes.add(2, "Inserido");
 
-System.out.println("---------------Inserindo itens no LINKED ------------------");
-nomes.add("Rubem");
-nomes.add("Fulano");
-nomes.addFirst("Teste");
-nomes.addLast("Ultimo");
-nomes.add(2, "Inserido");
+		System.out.println("Quantos nomes? " + nomes.size());
 
-System.out.println("Quantos nomes? "+nomes.size());
+		System.out.println("---------------Acessando itens no LINKED ------------------");
+		System.out.println("Quem é o primeiro? " + nomes.getFirst());
+		System.out.println("Quem é o segundo? " + nomes.get(1));
+		System.out.println("Quem é o ultimo? " + nomes.getLast());
 
+		System.out.println("---------------Percorrendo itens no LINKED com iteração em array------------------");
+		System.out.println("Ordem de inserção");
+		for (String nome : nomes) {
+			System.out.println("nome = " + nome);
+		}
 
-System.out.println("---------------Acessando itens no LINKED ------------------");
-System.out.println("Quem é o primeiro? " + nomes.getFirst());
-System.out.println("Quem é o segundo? " + nomes.get(1));
-System.out.println("Quem é o ultimo? " + nomes.getLast()); 
-		
- 
-System.out.println("---------------Percorrendo itens no LINKED com iteração em array------------------");
-System.out.println("Ordem de inserção");
-for (String nome : nomes) {
-	System.out.println("nome = " + nome);
-} 
+		System.out.println("---------------Percorrendo itens no LINKED com index em array------------------");
+		System.out.println("De forma inversa");
+		for (int nome = nomes.size() - 1; nome >= 0; nome--) {
 
+			System.out.println("(" + nome + ") cargo = " + nomes.get(nome));
 
-System.out.println("---------------Percorrendo itens no LINKED com index em array------------------");
-System.out.println("De forma inversa");
-for (int nome = nomes.size() - 1; nome >= 0; nome--) {
+		}
 
-	System.out.println("(" + nome + ") cargo = " + nomes.get(nome));
+		System.out.println("---------------Removendo itens no LINKED ------------------");
+		System.out.println("Removendo quem estava no indice 0 ou seja " + nomes.getFirst());
+		nomes.removeFirst();// removi o item no indice 0
 
-} 
+		System.out.println("Removendo quem tem o nome \"Fulano\" pelo valor, sem saber que esta no indice "
+				+ nomes.indexOf("Fulano"));
+		nomes.remove("Fulano");// remove o elemento que tiver esse valor, o indice será procurado
 
-
-System.out.println("---------------Removendo itens no LINKED ------------------");
-System.out.println("Removendo quem estava no indice 0 ou seja "+nomes.getFirst());
-nomes.removeFirst();//removi o item no indice 0
-
-
-System.out.println("Removendo quem tem o nome \"Fulano\" pelo valor, sem saber que esta no indice "+nomes.indexOf("Fulano"));
-nomes.remove("Fulano");//remove o elemento que tiver esse valor, o indice será procurado
-
-System.out.println("---------------Percorrendo itens no LINKED com forEach------------------");
-nomes.forEach(nome -> { 
-    System.out.println("nome " + nome);
-});
-
+		System.out.println("---------------Percorrendo itens no LINKED com forEach------------------");
+		nomes.forEach(nome -> {
+			System.out.println("nome " + nome);
+		});
 
 	}
-
 }
