@@ -5,6 +5,8 @@ import java.util.Scanner;
 import br.com.entra21.java.avancado.aula01.enuns.Enuns;
 import br.com.entra21.java.avancado.aula01.wrappers.Wrappers;
 import br.com.entra21.java.avancado.aula02.collections.list.AprenderList;
+import br.com.entra21.java.avancado.aula03.annotations.datas.Aula003;
+import br.com.entra21.java.avancado.aula03.annotations.datas.Aula03;
 
 public class Main {
 
@@ -31,7 +33,7 @@ public class Main {
 				AprenderList.aprender();
 				break;
 			case 4:
-				pedirPaciencia();
+				Aula03.aprender();
 				break;
 			case 5:
 				pedirPaciencia();
@@ -82,7 +84,7 @@ public class Main {
 
 		return menu;
 	}
-
+@Aula003
 	private static void pedirPaciencia() {
 		System.out.println("CALMA CALMA CALMA, muita CALMA... ainda não esta pronto.");
 		System.out.println("--------------------------------------------------------");
