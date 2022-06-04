@@ -7,6 +7,7 @@ import br.com.entra21.java.avancado.aula01.wrappers.Wrappers;
 import br.com.entra21.java.avancado.aula02.collections.list.AprenderList;
 import br.com.entra21.java.avancado.aula03.annotations.datas.Aula003;
 import br.com.entra21.java.avancado.aula03.annotations.datas.Aula03;
+import br.com.entra21.java.avancado.aula04.MenuAula04;
 
 public class Main {
 
@@ -36,7 +37,7 @@ public class Main {
 				Aula03.aprender();
 				break;
 			case 5:
-				pedirPaciencia();
+				MenuAula04.aprender();
 				break;
 			case 6:
 				pedirPaciencia();
@@ -69,22 +70,17 @@ public class Main {
 		menu += "\n  0 - Sair";
 		menu += "\n  1 - Aula 01 (pronto)- Classes Wrapper";// juntos 01
 		menu += "\n  2 - Aula 01 (pronto)- ENUM";// juntos 01
-
 		menu += "\n  3 - Aula 02 - Collections - LIST";// somente 02
-		menu += "\n  4 - Aula 03 - Annotations";// juntos 03
-		menu += "\n  5 - Aula 03 - Datas";// juntos 03
-		menu += "\n  6 - Aula 04 - Collections - SET";// somente 04
-		menu += "\n  6 - Aula 05 - Collections - MAP";// somente 05
-		menu += "\n  8 - Aula 06 - Generics";// somente 06
-		menu += "\n  9 - Aula 07 - Exceções e tratamento de erros";// somente 07
-		menu += "\n 10 - Aula 08 - Funções Lambda"; // somente 08
+		menu += "\n  4 - Aula 03 - Annotations, Datas";// juntos 03
+		menu += "\n  5 - Aula 04 - Collections - SET";// juntos 03
 		menu += "\n--------------------------------------------------------";
 		menu += "\n Escolha uma opção para aprender:";
 		menu += "\n--------------------------------------------------------";
 
 		return menu;
 	}
-@Aula003
+
+	@Aula003
 	private static void pedirPaciencia() {
 		System.out.println("CALMA CALMA CALMA, muita CALMA... ainda não esta pronto.");
 		System.out.println("--------------------------------------------------------");
