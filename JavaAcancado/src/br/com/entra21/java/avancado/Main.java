@@ -12,6 +12,7 @@ import br.com.entra21.java.avancado.aula03.annotations.datas.Aula03;
 import br.com.entra21.java.avancado.aula04.MenuAula04;
 import br.com.entra21.java.avancado.aula05.Aula05;
 import br.com.entra21.java.avancado.aula06.Aula06;
+import br.com.entra21.java.avancado.aula07.Aula07;
 
 public class Main {
 
@@ -57,7 +58,11 @@ public class Main {
 
 				break;
 			case 8:
-				pedirPaciencia();
+				ArrayList<String> assuntos = new ArrayList<>();
+				assuntos.add("Tratamento de Erro");
+				assuntos.add("Obter Detalhes do Erro");
+				assuntos.add("Custom exception");
+				new Aula07("Aula07", null).aprender();
 				break;
 			case 9:
 				pedirPaciencia();
